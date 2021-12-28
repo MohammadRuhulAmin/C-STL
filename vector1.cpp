@@ -3,7 +3,10 @@ using namespace std;
 #include<vector>
 #define mysize 100
 #include<iterator>
-
+#include<algorithm>
+bool sortingDecending(int a,int b){
+	return (a>b);
+}
 int main(){
 	vector<int>vec;
 	vec.push_back(100); // vec[0] = 100
@@ -24,8 +27,15 @@ int main(){
 	for(it = vecx.begin();it!=vecx.end();it++){
 		cout << *it << "\t";
 	}
-	puts("");	
+	puts("");
+	vector<double>vecxd;
+	vector<double>::iterator it;
+	sort(vec.begin(),vec.end()); // assending order to print!
+	sort(vec.begin(),vec.end,sortingDecending);
+	sort(vec.begin(),vec.begin()+3); // assiending order from vec begin to 3 elements 
+	sort(vec.begin(),vec.begin()+3,sortingDecending); //  decending order from vec begin to 3 elements 
 	
 	
+
 	return 0;
 }
