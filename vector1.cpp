@@ -4,6 +4,7 @@ using namespace std;
 #define mysize 100
 #include<iterator>
 #include<algorithm>
+#include<map>
 bool sortingDecending(int a,int b){
 	return (a>b);
 }
@@ -67,6 +68,7 @@ int main(){
 	cout << "Printing Vector \t";
 	for(vx= vecar.begin();vx!=vecar.end();vx++)cout << *vx << " ";
 	cout << endl;
+	
 	// inserting a value before x value in list
 	list<string>students;
 	students.push_back("Ruhul Amin");
@@ -106,6 +108,19 @@ int main(){
 	cout << endl;
 	for(itc = mycontacts.begin();itc!=mycontacts.end();itc++)cout << *itc << " ";
 	cout << endl;
+	
+	//map data stracture (key, value) pair
+	map<string,int>m;
+	m["Ruhul"] = 12;
+	m["Sakib"] = 23,
+	m["Sajid"] = 32;
+	m["nabil"] = 41;
+	m.insert(make_pair("Rx",11));
+	m.insert(make_pair("Tithy",22));
+	map<string,int>::iterator itm;
+	cout << "MAP Elements\n";
+	for(itm = m.begin();itm!=m.end();itm++)cout << itm->first << " " << itm->second << endl;
+	
 	
 	
 	
