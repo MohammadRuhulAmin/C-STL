@@ -5,6 +5,8 @@ using namespace std;
 #include<iterator>
 #include<algorithm>
 #include<map>
+#include<set>
+#include<stack>
 bool sortingDecending(int a,int b){
 	return (a>b);
 }
@@ -120,11 +122,48 @@ int main(){
 	map<string,int>::iterator itm;
 	cout << "MAP Elements\n";
 	for(itm = m.begin();itm!=m.end();itm++)cout << itm->first << " " << itm->second << endl;
-	
-	
-	
-	
-	
-	
+	pair<string,int>p;
+	p.first = "Rxx";
+	p.second = 31;
+	p = make_pair("codexx",112);
+	cout <<p.first <<  " " << p.second << endl;
+	vector<pair<int,string> >v;
+	v.push_back(make_pair(1,"Ruhul Amin"));
+	v.push_back(make_pair(2,"Aynun Zaria"));
+	v.push_back(make_pair(3,"Sakib Hasan"));
+	vector<pair<int,string> >::iterator pitr;
+	cout << "Vector and Pair Both\n";
+	for(pitr = v.begin();pitr!=v.end();pitr++){
+		cout << pitr->first << " " << pitr->second << endl;
+	}
+	cout << endl;
+	// set data stracture
+		// you cannot insert dublicat value in set
+		// all the values will be sorted inside set!
+	set<int>s;
+	set<int>::iterator sit;
+	s.insert(11);
+	s.insert(12);
+	s.insert(112);
+	cout << endl;
+	for(sit = s.begin();sit!=s.end();sit++)cout << *sit << " ";
+	cout << endl;
+	sit = s.find(11);
+	//s.erase(sit);
+	stack<string>stk;
+	stk.push("ruhul amin  ");
+	stk.push("Sakib Hasan ");
+	stk.push("Sajid Hasan ");
+	cout << stk.top() << endl;
+	stk.pop();
+	cout << stk.top() << endl;
+	if(stk.empty())cout << "YES The Stack is Empty\n";
+	else cout << "No stack is not empty\n";
+	while(!stk.empty()){
+		string x;
+		x = stk.top();
+		cout << x << " ";
+		stk.pop();
+	}
 	return 0;
 }
