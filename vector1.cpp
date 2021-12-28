@@ -35,7 +35,7 @@ int main(){
 	sort(vec.begin(),vec.begin()+3); // assiending order from vec begin to 3 elements 
 	sort(vec.begin(),vec.begin()+3,sortingDecending); //  decending order from vec begin to 3 elements 
 	
-	// list Data stracture : 
+	// list Data stracture :
 	list<float>mylist;
 	list<float>::iterator itf;
 	mylist.push_back(11);
@@ -55,7 +55,6 @@ int main(){
 	for(iti = myInfo.begin();iti!=myInfo.end();iti++){
 		cout <<  *iti << "\t";
 	}
-	
 	cout << endl;
 	// coping an array into list 
 	int arr[5] = {1,2,3,4,5};
@@ -68,7 +67,6 @@ int main(){
 	cout << "Printing Vector \t";
 	for(vx= vecar.begin();vx!=vecar.end();vx++)cout << *vx << " ";
 	cout << endl;
-	
 	// inserting a value before x value in list
 	list<string>students;
 	students.push_back("Ruhul Amin");
@@ -99,5 +97,19 @@ int main(){
 	cout << endl;
 	for(var = versity.begin();var!=versity.end();var++)cout << *var << " ";
 	cout << endl;
+	// list more functions 
+	string contacts[5] = {"101","102","103","104","105"};
+	list<string>mycontacts(contacts,contacts+5);
+	mycontacts.pop_front();
+	mycontacts.pop_back();
+	list<string>:: iterator itc;
+	cout << endl;
+	for(itc = mycontacts.begin();itc!=mycontacts.end();itc++)cout << *itc << " ";
+	cout << endl;
+	
+	
+	
+	
+	
 	return 0;
 }
