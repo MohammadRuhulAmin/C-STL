@@ -55,6 +55,7 @@ int main(){
 	for(iti = myInfo.begin();iti!=myInfo.end();iti++){
 		cout <<  *iti << "\t";
 	}
+	
 	cout << endl;
 	// coping an array into list 
 	int arr[5] = {1,2,3,4,5};
@@ -84,9 +85,19 @@ int main(){
 	for(names = students.begin();names!=students.end();names++){
 		cout << *names << "\t";
 	}
-	
-	
-	
-	
+	list<string>versity;
+	versity.push_back("AIUB");
+	versity.push_back("BUET");
+	versity.push_back("SUST");
+	versity.push_front("DU");
+	list<string>::iterator var;
+	cout << endl;
+	for(var = versity.begin();var!=versity.end();var++)cout << *var << " ";
+	cout << endl;
+	var = find(versity.begin(),versity.end(),"DU");
+	versity.erase(var);
+	cout << endl;
+	for(var = versity.begin();var!=versity.end();var++)cout << *var << " ";
+	cout << endl;
 	return 0;
 }
