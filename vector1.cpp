@@ -166,7 +166,6 @@ int main(){
 		cout << x << " ";
 		stk.pop();
 	}
-	
 	// priority queue is an sorted for integer and reverse lexicographical order for string  
 	priority_queue<int>q;
 	q.push(44);
@@ -189,5 +188,21 @@ int main(){
 	for(ml = mlm.begin();ml!=mlm.end();ml++){
 		cout << ml->first << " " << ml->second << endl;
  	}
+ 	// multiset datastracture 
+ 		// same as set but you can insert the same key inside multiset
+ 		cout << "\n Multiset \n";
+ 		multiset<int>mls;
+ 		multiset<int>::iterator ms;
+ 		mls.insert(122);
+ 		mls.insert(122);
+ 		mls.insert(122);
+ 		mls.insert(122);
+ 		for(ms = mls.begin();ms!=mls.end();ms++){
+ 			cout << *ms << " ";
+		 }
+ 		
+ 		
+ 		
+ 		
 	return 0;
 }
