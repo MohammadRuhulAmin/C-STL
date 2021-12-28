@@ -7,6 +7,7 @@ using namespace std;
 #include<map>
 #include<set>
 #include<stack>
+#include<queue>
 bool sortingDecending(int a,int b){
 	return (a>b);
 }
@@ -165,5 +166,28 @@ int main(){
 		cout << x << " ";
 		stk.pop();
 	}
+	
+	// priority queue is an sorted for integer and reverse lexicographical order for string  
+	priority_queue<int>q;
+	q.push(44);
+	q.push(12);
+	q.push(112);
+	while(!q.empty()){
+		int x;
+		x = q.top();
+		cout << x << " ";
+		q.pop();
+	}
+	// multimap datastracture 
+		// same as map but you can insert the same key inside multimap 
+	multimap<string,int>mlm;
+	multimap<string,int>::iterator ml;
+	mlm.insert(make_pair("ruhul",101));
+	mlm.insert(make_pair("sakib",102));
+	mlm.insert(make_pair("aynun",103));
+	cout << "\n Multimap data stracture \n";
+	for(ml = mlm.begin();ml!=mlm.end();ml++){
+		cout << ml->first << " " << ml->second << endl;
+ 	}
 	return 0;
 }
